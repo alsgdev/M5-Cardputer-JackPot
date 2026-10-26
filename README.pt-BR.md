@@ -16,15 +16,15 @@
 
 🌐 [English](README.md) · **Português (Brasil)**
 
-![M5Stack Cardputer](https://img.shields.io/badge/hardware-M5Stack%20Cardputer-E7352C?style=for-the-badge)
+![M5Stack Card Computer](https://img.shields.io/badge/hardware-M5Stack%20Card%20Computer-E7352C?style=for-the-badge)
 ![Arduino C++](https://img.shields.io/badge/Arduino-C%2B%2B-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 ![PT-BR / EN](https://img.shields.io/badge/UI-PT--BR%20%7C%20EN-07FFE0?style=for-the-badge)
 ![Créditos fictícios](https://img.shields.io/badge/creditos-ficticios-FEE440?style=for-the-badge)
 ![Licença: Unlicense](https://img.shields.io/badge/license-Unlicense-blue?style=for-the-badge)
 
-> **Inserir moeda?** Não há slot para moedas. Não há dinheiro. Há apenas um ESP32-S3, três rolos minúsculos e uma quantidade absurda de dopamina por milímetro quadrado.
+> **Inserir moeda?** Não há slot para moedas. Não há dinheiro. Há apenas um STAMP S3, três rolos minúsculos e uma quantidade absurda de dopamina por milímetro quadrado.
 
-Um jogo completo de jackpot / caça-níqueis para o **M5Stack Cardputer**, escrito em Arduino C++.
+Um jogo completo de jackpot / caça-níqueis para o **M5Stack Card Computer**, escrito em Arduino C++.
 
 Tem frutas girando, luzes piscando, melodias de jackpot, recordes persistentes, uma sequência dramática de **GAME OVER** de 4 segundos e um menu de configurações que fala **português (PT-BR)** e **inglês**.
 
@@ -34,9 +34,9 @@ Tem frutas girando, luzes piscando, melodias de jackpot, recordes persistentes, 
 
 | | |
 |---|---|
-| **Máquina** | M5Stack Cardputer |
+| **Máquina** | M5Stack Card Computer |
 | **Tela** | 240 × 135 px, 16 bits, renderizada com sprites |
-| **Cérebro** | ESP32-S3 |
+| **Cérebro** | STAMP S3 |
 | **Linguagem** | Arduino C++ |
 | **Som** | Alto-falante embutido (microfone desativado — compartilham o hardware) |
 | **Memória** | NVS / flash via `Preferences` |
@@ -44,11 +44,15 @@ Tem frutas girando, luzes piscando, melodias de jackpot, recordes persistentes, 
 | **Rolos** | 3 |
 | **Símbolos** | 🍒 cereja · 🍋 limão · 🍊 laranja · 🍇 uva · 🔔 sino · 7️⃣ sete |
 
+![M5 Card Computer rodando o Jackpot de Bolso](img/IMG_20261026_202427.jpg)
+
+*A máquina de verdade: um M5 Card Computer rodando o jogo (interface em inglês).*
+
 ---
 
 ## 🪙 Início Rápido
 
-1. Grave o sketch no seu Cardputer.
+1. Grave o sketch no seu Card Computer.
 2. A máquina inicia com **100 créditos grátis**.
 3. Pressione **qualquer tecla** para girar.
 4. Ganhe, perca ou fique dramaticamente sem créditos.
@@ -62,7 +66,7 @@ Nenhuma moeda real é inserida, ganha, perdida ou maltratada na produção deste
 
 ![Telas do Jackpot de Bolso: menu, configurações, confirmação de zerar placar, ajuste de volume no jogo e um jackpot 7-7-7](img/telas_jackpot_cardputer.png)
 
-*Capturas reais do Cardputer: menu, configurações, confirmação de zerar placar, aviso de volume e o raro jackpot 7-7-7.*
+*Capturas reais do Card Computer: menu, configurações, confirmação de zerar placar, aviso de volume e o raro jackpot 7-7-7.*
 
 As mesmas telas em ASCII, para os aficionados por terminal:
 
@@ -280,7 +284,7 @@ O símbolo final de cada rolo é escolhido independentemente com `random(0, SYMB
 
 | Sintoma | Causa provável | Solução |
 |---|---|---|
-| “Falha ao alocar sprites” / “Sprite allocation failed” | RAM insuficiente na inicialização | Reinicie o Cardputer |
+| “Falha ao alocar sprites” / “Sprite allocation failed” | RAM insuficiente na inicialização | Reinicie o Card Computer |
 | Sem som | Mudo ou volume em 0 | Pressione `m`, aumente o volume com `]` |
 | As teclas não fazem nada durante o GAME OVER | Funcionando como esperado | Aguarde 4 segundos |
 | Os créditos de repente viraram 100 | Você chegou a zero | A casa recarregou você |
@@ -291,6 +295,7 @@ O símbolo final de cada rolo é escolhido independentemente com `random(0, SYMB
 
 ## 🗺️ Lista de Desejos / Próximos Jackpots
 
+- [ ] Modo multiplayer usando a conectividade do STAMP S3
 - [ ] Mais linhas de pagamento do que “a do meio”
 - [ ] Rodada bônus com frutas suspeitosamente generosas
 - [ ] Comemoração animada de recorde

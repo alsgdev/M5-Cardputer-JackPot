@@ -16,15 +16,15 @@
 
 🌐 **English** · [Português (Brasil)](README.pt-BR.md)
 
-![M5Stack Cardputer](https://img.shields.io/badge/hardware-M5Stack%20Cardputer-E7352C?style=for-the-badge)
+![M5Stack Card Computer](https://img.shields.io/badge/hardware-M5Stack%20Card%20Computer-E7352C?style=for-the-badge)
 ![Arduino C++](https://img.shields.io/badge/Arduino-C%2B%2B-00979D?style=for-the-badge&logo=arduino&logoColor=white)
 ![PT-BR / EN](https://img.shields.io/badge/UI-PT--BR%20%7C%20EN-07FFE0?style=for-the-badge)
 ![Fictional credits](https://img.shields.io/badge/credits-fictional-FEE440?style=for-the-badge)
 ![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue?style=for-the-badge)
 
-> **Insert coin?** There is no coin slot. There is no money. There is only an ESP32-S3, three tiny reels, and an unreasonable amount of dopamine per square millimetre.
+> **Insert coin?** There is no coin slot. There is no money. There is only a STAMP S3, three tiny reels, and an unreasonable amount of dopamine per square millimetre.
 
-A complete jackpot / slot-machine game for the **M5Stack Cardputer**, written in Arduino C++.
+A complete jackpot / slot-machine game for the **M5Stack Card Computer**, written in Arduino C++.
 
 It has spinning fruit, flashing lights, jackpot melodies, persistent high scores, a 4-second GAME OVER drama sequence, and a settings menu that speaks **Portuguese (PT-BR)** and **English**.
 
@@ -34,9 +34,9 @@ It has spinning fruit, flashing lights, jackpot melodies, persistent high scores
 
 | | |
 |---|---|
-| **Machine** | M5Stack Cardputer |
+| **Machine** | M5Stack Card Computer |
 | **Display** | 240 × 135 px, 16-bit colour, sprite-rendered |
-| **Brain** | ESP32-S3 |
+| **Brain** | STAMP S3 |
 | **Language** | Arduino C++ |
 | **Sound** | Built-in speaker (microphone disabled — they share hardware) |
 | **Memory** | NVS / flash via `Preferences` |
@@ -44,11 +44,15 @@ It has spinning fruit, flashing lights, jackpot melodies, persistent high scores
 | **Reels** | 3 |
 | **Symbols** | 🍒 cherry · 🍋 lemon · 🍊 orange · 🍇 grape · 🔔 bell · 7️⃣ seven |
 
+![M5 Card Computer running Jackpot de Bolso](img/IMG_20261026_202427.jpg)
+
+*The real machine: an M5 Card Computer running the game.*
+
 ---
 
 ## 🪙 Quick Start
 
-1. Flash the sketch to your Cardputer.
+1. Flash the sketch to your Card Computer.
 2. The machine boots with **100 free credits**.
 3. Press **any key** to spin.
 4. Win, lose, or dramatically run out of credits.
@@ -62,7 +66,7 @@ No real currency is inserted, won, lost, or harmed in the making of this game.
 
 ![Screens of Jackpot de Bolso: menu, settings, reset confirmation, in-game volume control, and a 7-7-7 jackpot](img/telas_jackpot_cardputer.png)
 
-*Real screenshots from the Cardputer: menu, settings, reset confirmation, volume toast, and the elusive 7-7-7 jackpot.*
+*Real screenshots from the Card Computer: menu, settings, reset confirmation, volume toast, and the elusive 7-7-7 jackpot.*
 
 The same screens in ASCII, for the terminal-inclined:
 
@@ -280,7 +284,7 @@ Each reel's final symbol is chosen independently with `random(0, SYMBOL_COUNT)` 
 
 | Symptom | Likely cause | Fix |
 |---|---|---|
-| “Falha ao alocar sprites” / “Sprite allocation failed” | Not enough RAM at boot | Restart the Cardputer |
+| “Falha ao alocar sprites” / “Sprite allocation failed” | Not enough RAM at boot | Restart the Card Computer |
 | No sound | Muted, or volume is 0 | Press `m`, raise volume with `]` |
 | Keys do nothing during GAME OVER | Working as intended | Wait 4 seconds |
 | Credits suddenly became 100 | You hit zero | The house refilled you |
@@ -291,6 +295,7 @@ Each reel's final symbol is chosen independently with `random(0, SYMBOL_COUNT)` 
 
 ## 🗺️ Wishlist / Future Jackpots
 
+- [ ] Multiplayer mode using STAMP S3 connectivity
 - [ ] More paylines than “the middle one”
 - [ ] Bonus round with suspiciously generous fruit
 - [ ] Animated high-score celebration
